@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="shortcut icon" href="./img/Luta2.svg" type="image/x-icon">
     <title>Jogo Fight!</title>
@@ -34,6 +37,25 @@
                 <strong class="name">----</strong>
                 <div>
                     <button class="attackButton">Atacar</button>
+                    <style>
+                        .lifebar .bar {
+                            height: inherit;
+                            background-color: rgb(7, 165, 46);
+                            border-radius: 5px 0px 0px 5px;
+                        }
+
+                        .attackButton {
+                            cursor: pointer;
+                            display: block;
+                            margin-left: 2px;
+                            margin-top: 5px;
+                        }
+
+                        .attackButton:hover {
+                            color: rgb(255, 255, 255);
+                            background-color: rgb(190, 10, 10);
+                        }
+                    </style>
                 </div>
 
             </div>
@@ -46,6 +68,7 @@
     <footer>
 
     </footer>
+    <script src="./assets/js/classes.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

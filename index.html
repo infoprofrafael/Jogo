@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="shortcut icon" href="./img/Luta2.svg" type="image/x-icon">
     <title>Jogo Fight!</title>
@@ -16,7 +16,51 @@
     <header>
 
     </header>
-    <main>
+    <main class="container-box">
+        <div class="top">
+            <h1 id="welcome">SEJA BEM-VINDO!</h1>
+            <div class="info">
+                <p>Você está na plataforma do jogo <em><strong>The Fight!</strong></em></p>
+
+                <h2 id="info">Informações importantes!</h2>
+
+                <div class="img-area">
+                    <div class="img-logo" id="imglogo"></div>
+
+                    <div class="img-input">
+
+
+                        <div class="img-input-input">
+                            <br>
+                            <em><strong> <label for="name"></label>Digite o seu primeiro nome:</strong></em> <input
+                                type="text" name="name" placeholder="  Primeiro nome"> <br>
+
+                            <h3>Escolha a Classe do seu personagem:</h3>
+
+                            <div class="selection-persona">
+                                <div class="input-persona">
+                                    <div class="img-persona" id="imgpersona-1"></div>
+                                    <h3>Guerreiro</h3>
+
+                                </div>
+
+                                <div class="input-persona">
+                                    <div class="img-persona" id="imgpersona-2"></div>
+                                    <h3>Sorcerer</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <br>
+
         <div class="fightarea">
             <!--Primeiro personagem-->
             <div id="char">
@@ -38,10 +82,15 @@
                 <div>
                     <button class="attackButton">Atacar</button>
                     <style>
+                        .lifebar {
+                            height: 20px;
+                        }
+
                         .lifebar .bar {
                             height: inherit;
                             background-color: rgb(7, 165, 46);
                             border-radius: 5px 0px 0px 5px;
+
                         }
 
                         .attackButton {
@@ -49,13 +98,19 @@
                             display: block;
                             margin-left: 2px;
                             margin-top: 5px;
+                            padding: 4px;
+                            font-size: medium;
+                            border-radius: 12px;
+                            box-shadow: 1px 2px 5px rgb(95, 93, 93);
                         }
 
                         .attackButton:hover {
                             color: rgb(255, 255, 255);
                             background-color: rgb(190, 10, 10);
+                            box-shadow: 2px 4px 3px rgb(95, 93, 93);
                         }
                     </style>
+
                 </div>
 
             </div>

@@ -1,7 +1,7 @@
 let log = new Log(document.querySelector('.log'));
 
 let char = new Knight("Luís");
-let monster = new LittleMonster();
+let monster = new BigMonster();
 
 //Chamando as informções essenciais dos guerreiros e seus elementos
 const stage = new Stage(
@@ -11,4 +11,9 @@ const stage = new Stage(
     document.querySelector('#monster'),
     log
 );
+
+// if (querySelector(".bar")<20%){
+//     document.querySelector(".bar").innerHTML = style.background-color: red;
+// }
+
 stage.start();

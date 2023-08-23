@@ -1,8 +1,155 @@
 *{
     font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container-box{
+    display:block;
+    padding: 10px;
+    max-width: 830px;
+    width: 100%;
+    min-height: 1400px;
+    height: 100%;
+    background-image: linear-gradient(rgb(223, 212, 212), rgb(165, 159, 159), rgb(95, 78, 78));
+    margin: 5px auto;
+    border-radius: 22px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.img-area{
+    
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    column-gap: 35px; 
+   
 }
 
+.img-logo{
+    background-color:white;
+    width: 300px;
+    height: 250px;
+    box-shadow: 2px 2px 3px rgb(95, 93, 93);
+    /* margin-top: 33px; */
+    border: solid gray 2px;
+}
+
+#imglogo{
+    background-image: url(../img/luta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /*Centralizando e justificando a imagem*/
+    background-size: contain;
+
+}
+
+.top #welcome{
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+#info{
+    margin-top: 20px;
+    font-size: 30px;    
+    margin-bottom: 5px;
+    background-color: rgba(120,120,120, 0.3);
+}
+
+
+.img-input{
+    
+    max-width: 450px;
+    width: 100%;
+    text-align: left;
+}
+
+.img-input-input input{
+    margin-top: 10px;
+    border-radius: 20px;
+    margin-left: 5px;
+    font-size: large;
+
+}
+
+.img-input h3{
+    margin-top:0;
+    margin-bottom: 6px;
+}
+
+.selection-persona{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    
+}
+
+
+.input-persona{
+    display: block;
+    
+}
+
+.img-persona{
+    height: 200px;
+    width: 120px;
+    background-color: blue;
+    margin-bottom: 1px;
+
+}
+
+#imgpersona-1{
+    background-image: url(../img/guerreiro.jpg);
+    background-repeat: no-repeat;
+    background-position: top 1% left 4%;
+    opacity: .5;
+    border: solid 2px #faff00;
+    box-shadow: 2px 2px 3px rgb(95, 93, 93);
+    
+    
+}
+
+
+#imgpersona-1:hover{
+    zoom: 1.1;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    box-shadow: 2px 4px 3px rgb(95, 93, 93);
+    
+}
+
+.img-input h3{
+    margin-top: 0;
+    margin-bottom: 5px; 
+}
+
+#imgpersona-2{
+    background-image: url(../img/Sorcerer.jpg);
+    background-repeat: no-repeat;
+    background-position: top 18% left 10%;
+    opacity: .5;
+    border: solid 2px #faff00;
+    box-shadow: 2px 2px 3px rgb(95, 93, 93);
+       
+}
+
+#imgpersona-2:hover{
+    zoom: 1.1;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    box-shadow: 2px 4px 3px rgb(95, 93, 93);
+}
+
+
 .fightarea{
+    margin-top: 10px;
     display: flex;
     gap: 20px;
 }
@@ -19,7 +166,32 @@
 }
 
 .log{
-    border: 1px dotted #999;
-    height: 200px;
+    margin-top: 10px;
+    background-color: rgb(223, 226, 223);
+    border: 2px dotted #10c019;
+    height: 230px;
     overflow-y: scroll;
+    text-align: left;
 }
+
+@media (max-width:450px){
+    
+.logo-img{
+    
+    width: 96%;
+    height:19em;
+    background-size: contain;
+   
+    
+}
+
+}
+
+
+@media (max-width:310px){
+    
+    .logo-img{
+        height:10em;
+
+    }
+}    

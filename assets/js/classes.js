@@ -102,11 +102,14 @@ update(){
 
 
 doAttack(attacking, attacked){
-    console.log(`${attacking.name} está atacando  ${attacked.name} `);
+   
 
     if (attacking.life <=0 || attacked.life<=0){
-        this.log.addMessage("A batalha não pode mais prosseguir!")
+    this.log.addMessage(`<strong> <em> "A batalha não pode mais prosseguir!" </em></strong>`)
           return;        
+     } else{
+        this.log.addMessage(`<strong> <em> ${attacking.name} </em></strong> atacou <strong><em> ${attacked.name} </em></strong>`);
+
      }
 
 
@@ -116,19 +119,22 @@ doAttack(attacking, attacked){
     let defenseFactor = (Math.random() *1.15 ).toFixed(2);
 
     let actualAttack = attacking.attack * attackFactor;
-    console.log(actualAttack.toFixed(2));
+    // Verificando o ataque
+    // console.log(actualAttack.toFixed(2));
 
     let actualDefense = attacked.defense * defenseFactor;
-    console.log(actualDefense.toFixed(2))
+    // Verificando a defesa
+    //console.log(actualDefense.toFixed(2))
 
-    if ((actualAttack - actualDefense) < 0){
+    if ((actualAttack - actualDefense) <= 0){
         actualAttack = 0;
-        console.log(`Excelente, defesa bem sucedida de ${attacked.name}`);
+        this.log.addMessage(`<strong> <em> ${attacked.name} </em></strong> conseguiu defender!`);
     } else{
         actualAttack = actualAttack - actualDefense;
-        console.log(`${attacking.name} causou um dano de ${actualAttack.toFixed(2)} em ${attacked.name}`)
+        this.log.addMessage(`${attacking.name} causou um dano de ${actualAttack.toFixed(2)} em ${attacked.name}`)
         attacked.life -= actualAttack;
-        console.log(attacked.life);
+        // Verificando o life atual
+        // this.log.addMessage(attacked.life);
     }
 
     this.update()
@@ -136,7 +142,7 @@ doAttack(attacking, attacked){
 
 }
 
-class log{
+class Log{
     list=[];
 
     constructor(listEl){
@@ -151,6 +157,7 @@ class log{
     render(){
         this.listEl.innerHTML = '';
 
+        //Preenchendo os dados
         for(let i in this.list){
             this.listEl.innerHTML += `<li> ${this.list[i]}</li>`;
         }

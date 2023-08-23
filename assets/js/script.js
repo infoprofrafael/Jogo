@@ -1,7 +1,7 @@
 let log = new Log(document.querySelector('.log'));
 
-let char = new Knight("Luís");
-let monster = new BigMonster();
+let char = new Sorcerer("Luís");
+let monster = new LittleMonster();
 
 //Chamando as informções essenciais dos guerreiros e seus elementos
 const stage = new Stage(

@@ -20,7 +20,7 @@
         <div class="top">
             <h1 id="welcome">SEJA BEM-VINDO!</h1>
             <div class="info">
-                <p>Você está na plataforma do jogo <em><strong>The Fight!</strong></em></p>
+                <h2>Você está na plataforma do jogo <em><strong>The Fight!</strong></em></h2>
 
                 <h2 id="info">Informações importantes!</h2>
 
@@ -32,10 +32,27 @@
 
                         <div class="img-input-input">
                             <br>
-                            <em><strong> <label for="name"></label>Digite o seu primeiro nome:</strong></em> <input
-                                type="text" name="name" placeholder="  Primeiro nome"> <br>
+                            <div class="text-input"><em><strong> <label for="name"></label> NOME: </strong></em> <input
+                                    type="text" name="name" id="nameinput" placeholder=" Primeiro nome">
+                                <button id="conf-name" type="button" onclick="nameChar()">OK</button>
+                            </div>
+                            <script>
+                                function nameChar() {
+                                    let namechar = document.querySelector('#nameinput').value;
+                                    if(namechar !=""){
+                                        alert(`Olá ${namechar}, seja bem vindo!`);
+                                        document.getElementById("testename").innerHTML =namechar;
+                                        document.getElementById("nameinput").value = null;
+                                    } else{
+                                        alert("Digite um nome!");
+                                    }
+                                }
 
-                            <h3>Escolha a Classe do seu personagem:</h3>
+                            </script>
+                            <p id="testename"> </p>
+                            <div class="text-input">
+                                <h3>Escolha a Classe do seu personagem:</h3>
+                            </div>
 
                             <div class="selection-persona">
                                 <div class="input-persona">
@@ -67,8 +84,8 @@
                 <div class="lifebar">
                     <div class="bar" style="width: 10%;"></div>
                 </div>
-                <strong class="name">----</strong>
-                <div>
+                <strong class="name">-</strong>
+                <div class="area-bt">
                     <button class="attackButton">Atacar</button>
                 </div>
             </div>
@@ -78,8 +95,8 @@
                 <div class="lifebar">
                     <div class="bar" style="width: 10%;"></div>
                 </div>
-                <strong class="name">----</strong>
-                <div>
+                <strong class="name">-</strong>
+                <div class="area-bt">
                     <button class="attackButton">Atacar</button>
                     <style>
                         .lifebar {
@@ -115,14 +132,24 @@
 
             </div>
         </div>
+        <div class="chars">
 
-        <ul class="log"></ul>
-        
+        </div>
+        <div class="history">
+
+
+
+            <ul class="log"></ul>
+
+
+        </div>
+
 
 
     </main>
     <footer>
-        <div class="info-inspiracao"> <strong> Fotos de personagens do jogo Brasileiro "Guerreiros Folclóricos" </strong></div>
+        <div class="info-inspiracao"> <strong> Fotos de personagens do jogo Brasileiro "Guerreiros Folclóricos"
+            </strong></div>
 
     </footer>
     <script src="./assets/js/classes.js"></script>

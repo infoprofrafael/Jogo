@@ -3,20 +3,59 @@
     margin: 0;
     padding: 0;
 }
+
 .container-box{
     display:block;
-    padding: 10px;
+    padding: 5px;
     max-width: 830px;
-    width: 100%;
-    min-height: 1400px;
+    width: 99%;
+    min-height: 1100px;
     height: 100%;
     background-image: linear-gradient(rgb(223, 212, 212), rgb(165, 159, 159), rgb(95, 78, 78));
+    background-size: cover;
     margin: 5px auto;
     border-radius: 22px;
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
+
+.top{
+    margin-left: 10px;
+
+}
+
+.top #welcome{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    max-width: 790px;
+    width: 95%;
+    
+
+}
+
+.info{
+    max-width: 820px;
+    width: 99%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#info{
+   
+    text-align: center;
+    
+    margin-top: 20px;
+    font-size: 30px;    
+    margin-bottom: 5px;
+    background-color: rgba(120,120,120, 0.3);
+    max-width: 800px;
+    width: 100%;
+}
+
+
 .img-area{
     
     align-items: center;
@@ -24,6 +63,7 @@
     flex-direction: row;
     flex-wrap: wrap; 
     column-gap: 35px; 
+    justify-content: center;
    
 }
 
@@ -45,32 +85,31 @@
 
 }
 
-.top #welcome{
-    margin-top: 10px;
-    margin-bottom: 15px;
-
-}
-#info{
-    margin-top: 20px;
-    font-size: 30px;    
-    margin-bottom: 5px;
-    background-color: rgba(120,120,120, 0.3);
-}
-
-
 .img-input{
     
     max-width: 450px;
     width: 100%;
     text-align: left;
+    
+}
+.text-input{
+    margin-left: 16px;
 }
 
 .img-input-input input{
     margin-top: 10px;
+    margin-right: 10px;
     border-radius: 20px;
-    margin-left: 5px;
     font-size: large;
+    margin-left: 5px;
+    outline: none;
 
+}
+ /* botão confirmar nome */
+#conf-name{
+    padding: 1px 5px;
+    font-size: large;
+    box-shadow: 2px 2px 3px rgb(95, 93, 93);
 }
 
 .img-input h3{
@@ -79,9 +118,11 @@
 }
 
 .selection-persona{
+    justify-content: center;
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 25px;
+
     
 }
 
@@ -95,15 +136,21 @@
     height: 200px;
     width: 120px;
     background-color: blue;
-    margin-bottom: 1px;
-
+    margin: 20px 5px;
+    background-image: url(../img/guerreiro.jpg);
+    background-repeat: no-repeat;
+    background-position: top 1% left 4%;
+    opacity: .75;
+    border: solid 2px #faff00;
+    box-shadow: 2px 2px 3px rgb(95, 93, 93);
+    
 }
 
 #imgpersona-1{
     background-image: url(../img/guerreiro.jpg);
     background-repeat: no-repeat;
     background-position: top 1% left 4%;
-    opacity: .5;
+    opacity: .75;
     border: solid 2px #faff00;
     box-shadow: 2px 2px 3px rgb(95, 93, 93);
     
@@ -112,13 +159,16 @@
 
 
 #imgpersona-1:hover{
-    zoom: 1.1;
+    transform: scale(1.15);
     opacity: 1;
-    transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -webkit-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
+    transition: opacity 1.75s ease-in-out;
+    -moz-transition: opacity 1.75s ease-in-out;
+    -webkit-transition: opacity 1.75s ease-in-out;
+    -o-transition: opacity 1.75s ease-in-out;
     box-shadow: 2px 4px 3px rgb(95, 93, 93);
+    background-size: cover;
+    border: solid 2px #10c019;
+    
     
 }
 
@@ -131,20 +181,26 @@
     background-image: url(../img/Sorcerer.jpg);
     background-repeat: no-repeat;
     background-position: top 18% left 10%;
-    opacity: .5;
+    opacity: .75;
     border: solid 2px #faff00;
     box-shadow: 2px 2px 3px rgb(95, 93, 93);
+    
        
 }
 
 #imgpersona-2:hover{
-    zoom: 1.1;
+    transform: scale(1.15);
     opacity: 1;
-    transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -webkit-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
+    transition: opacity 1.75s ease-in-out;
+    -moz-transition: opacity 1.75s ease-in-out;
+    -webkit-transition: opacity 1.75s ease-in-out;
+    -o-transition: opacity 1.75s ease-in-out;
     box-shadow: 2px 4px 3px rgb(95, 93, 93);
+    background-size: cover;
+    border: solid 2px #10c019;
+    
+    
+    
 }
 
 
@@ -153,10 +209,15 @@
     display: flex;
     gap: 20px;
 }
+.area-bt{
+    width: 100px;
+}
 
 #char,
 #monster {
     flex: 1;
+    max-width: 390px;
+    width: 97%;
 }
 .lifebar{
     height: 15px;
@@ -164,21 +225,79 @@
     border: 1px solid #333;
     border-radius: 5px;
 }
+.name{
+    text-align: left;
+}
+
+.history{
+    display:block;
+    padding: 5px;
+    max-width: 530px;
+    width: 90%;
+    height: 250px;
+    background-image: linear-gradient(rgb(223, 212, 212), rgb(165, 159, 159), rgb(95, 78, 78));
+    margin: 10px auto;
+    border-radius: 22px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 
 .log{
+    
     margin-top: 10px;
     background-color: rgb(223, 226, 223);
     border: 2px dotted #10c019;
     height: 230px;
+    border-radius: 10px;
     overflow-y: scroll;
     text-align: left;
+    max-width: 520px;
+    width: 99%;
 }
 .info-inspiracao{
     text-align: center;
     margin-bottom: 10px;
 }
 
-@media (max-width:450px){
+
+@media (max-width:700px){
+    
+main.container-box{
+    padding: 1px;
+    max-width: 605px;
+    width: 95%;
+ }
+     
+ .top{
+     margin-left: 3px;
+     padding-left: 2px;
+ }
+ 
+ .top h2{
+     font-size: large;
+ }
+
+}
+
+@media (max-width:510px){
+
+.text-input{
+    margin-left: 6px;
+
+}
+
+.fightarea{
+    margin-top: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+
+}
+
+
+@media (max-width:490px){
     
 .logo-img{
     
@@ -187,6 +306,13 @@
     background-size: contain;
    
     
+}
+
+.text-input{
+
+    text-align: center;
+    margin-bottom: 5px;
+
 }
 
 }
